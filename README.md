@@ -109,9 +109,10 @@ sync local with dev
 ```
 wp plugin deactivate --all^C
 wp db import bitnami_wordpress.sql 
-wp search-replace 'https://dev.thinkproductgroup.com' 'http://localhost:10049' --all-tables
+wp search-replace 'https://dev.thinkproductgroup.com' 'http://localhost:10003' --all-tables
+wp search-replace 'dev.thinkproductgroup.com' 'localhost:10003' --all-tables
 wp search-replace 'https' 'http' --all-tables
-wp search-replace 'thinkproductgroup.com' 'localhost:10049' --all-tables
+wp search-replace 'thinkproductgroup.com' 'localhost:10003' --all-tables
 ```
 
 
