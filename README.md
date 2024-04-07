@@ -107,8 +107,8 @@ git push -u origin jay
 
 sync local with dev
 ```
-wp plugin deactivate --all
-wp db import bitnami_wordpress.sql 
+wp db import bitnami_wordpress.sql
+wp plugin deactivate --all 
 wp search-replace 'https://dev.thinkproductgroup.com' 'http://localhost:10003' --all-tables
 ```
 
