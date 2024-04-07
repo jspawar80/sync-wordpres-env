@@ -22,7 +22,7 @@ Test your SSH connection to GitLab.
 
 ```
 eval $(ssh-agent -s)
-ssh-add  ~/.ssh/id_ed25519.pub
+ssh-add  ~/.ssh/id_ed25519
 ```
 5. Configure Git:
 Set your Git username and email.
@@ -107,12 +107,9 @@ git push -u origin jay
 
 sync local with dev
 ```
-wp plugin deactivate --all^C
+wp plugin deactivate --all
 wp db import bitnami_wordpress.sql 
 wp search-replace 'https://dev.thinkproductgroup.com' 'http://localhost:10003' --all-tables
-wp search-replace 'dev.thinkproductgroup.com' 'localhost:10003' --all-tables
-wp search-replace 'https' 'http' --all-tables
-wp search-replace 'thinkproductgroup.com' 'localhost:10003' --all-tables
 ```
 
 
