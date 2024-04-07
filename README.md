@@ -112,10 +112,20 @@ sync local with dev:
 find . -type f ! -name 'wp-config.php' -delete
 find . -type d -empty -delete
 rsync -ru /home/jay/tpg-main-website/* .
+sed -i 's/127.0.0.1/localhost/g; s/bitnami_wordpress/local/g' bitnami_wordpress.sql
 wp db import bitnami_wordpress.sql
 wp plugin deactivate --all 
 wp search-replace 'https://dev.thinkproductgroup.com' 'http://localhost:10003' --all-tables
 ```
 
+sync local with working directory
+1. create a site on localwp and open site shell
+```
+rm -rf bitnami_wordpress.sql
+wp search-replace  "$replace_url" 'https://dev.thinkproductgroup.com' --all-tables
+wp db export bitnami_wordpress.sql
+sed -i 's/localhost/127.0.0.1/g; s/local/bitnami_wordpress/g' bitnami_wordpress.sql
+rsync -ru --exclude="wp-config.php" --exclude="script.sh" /home/jay/localwp/dev2/app/public/* /home/jay/tpg-main-website/
+```
 
 
