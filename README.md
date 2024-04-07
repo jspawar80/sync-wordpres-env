@@ -125,7 +125,7 @@ rm -rf bitnami_wordpress.sql
 wp search-replace  "$replace_url" 'https://dev.thinkproductgroup.com' --all-tables
 wp db export bitnami_wordpress.sql
 sed -i 's/localhost/127.0.0.1/g; s/local/bitnami_wordpress/g' bitnami_wordpress.sql
-rsync -ru --exclude="wp-config.php" --exclude="script.sh" /home/jay/localwp/dev2/app/public/* /home/jay/tpg-main-website/
+rsync -ru --exclude="wp-config.php" /home/jay/localwp/dev2/app/public/* /home/jay/tpg-main-website/
 ```
 
 
