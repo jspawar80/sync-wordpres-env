@@ -123,7 +123,7 @@ sync local with working directory
 1. syncing working directory with latest changes on local wordpress
 ```
 rm -rf bitnami_wordpress.sql
-wp search-replace  "$replace_url" 'https://dev.thinkproductgroup.com' --all-tables
+wp search-replace  'http://localhost:10003' 'https://dev.thinkproductgroup.com' --all-tables
 wp db export bitnami_wordpress.sql
 sed -i 's/localhost/127.0.0.1/g; s/local/bitnami_wordpress/g' bitnami_wordpress.sql
 rsync -ru --exclude="wp-config.php" /home/jay/localwp/dev2/app/public/* /home/jay/tpg-main-website/
