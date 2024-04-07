@@ -120,7 +120,7 @@ wp search-replace 'https://dev.thinkproductgroup.com' 'http://localhost:10003' -
 ```
 
 sync local with working directory
-1. create a site on localwp and open site shell
+1. syncing working directory with latest changes on local wordpress
 ```
 rm -rf bitnami_wordpress.sql
 wp search-replace  "$replace_url" 'https://dev.thinkproductgroup.com' --all-tables
