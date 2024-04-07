@@ -104,6 +104,7 @@ git add .
 git commit -m "added development-test site files"
 git push -u origin jay
 ```
+# setup wordpress on localwp using Dev wordpress site
 
 sync local with dev:
 1. create a site on localwp and open site shell
