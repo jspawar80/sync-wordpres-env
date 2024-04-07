@@ -105,8 +105,13 @@ git commit -m "added development-test site files"
 git push -u origin jay
 ```
 
-sync local with dev
+sync local with dev:
+1. create a site on localwp and open site shell
+
 ```
+find . -type f ! -name 'wp-config.php' -delete
+find . -type d -empty -delete
+rsync -ru /home/jay/tpg-main-website/* .
 wp db import bitnami_wordpress.sql
 wp plugin deactivate --all 
 wp search-replace 'https://dev.thinkproductgroup.com' 'http://localhost:10003' --all-tables
