@@ -7,6 +7,8 @@ Open a terminal and run the following command, replacing your_email@example.com 
 ```
 ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
+![image](https://github.com/jspawar80/sync-wordpres-env/assets/127867978/ee52c8c0-504e-421c-b3ba-b1aae4517cd4)
+
 2. View and Copy the SSH Public Key:
 Display and copy your public SSH key to the clipboard.
 
