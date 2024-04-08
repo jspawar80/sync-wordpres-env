@@ -15,6 +15,9 @@ Display and copy your public SSH key to the clipboard.
 ```
 cat ~/.ssh/id_ed25519.pub
 ```
+Example of SSH Public Key, coppy from ssh-ed25519 till email address.
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK0wmN/Cr3JXqmLW7u+g9pTh+wyqDHpSQEIQczXkVx9q gleb@reys.net
+
 3. Add SSH Key to GitLab:
 - Navigate to your GitLab account settings.
 - Locate the SSH key section and paste your public key there.
